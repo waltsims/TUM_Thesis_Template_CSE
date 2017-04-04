@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Die Inhaltsuebersicht                                             %%
+%% MW, 000111                                                        %%
+%% AM, 001216                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvidesPackage{styles/shortoverview} 
+
+%\newcommand{\uebersicht}{\chapter*{Inhaltsübersicht}%
+\newcommand{\shortoverview}{%
+ \chapter*{Overview}%
+ \@starttoc{ueb}%
+}
+
+\newcommand{\uebsection}[2]{%
+ \addcontentsline{ueb}{uebersection}%
+  {\protect\numberline{\thechapter}#1}%
+ \addcontentsline{ueb}{ueberdesc}%
+  {\protect\numberline{}#2}%
+}
+
+\newcommand{\mychapter}[2][]{%
+ \chapter{#2}%
+ \vspace{1.0 cm}%
+ {\raggedright \sectfont #1\par}%
+ \vspace{0.3 cm}%
+ \hrule%
+ \vspace{2.7 cm}%
+ \uebsection{#2}{#1}%
+}
+
+\newcommand*\l@uebersection[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \sectfont
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\dotfill \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\newcommand*\l@ueberdesc[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.2em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfill \nobreak\hb@xt@\@pnumwidth{\hss}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}

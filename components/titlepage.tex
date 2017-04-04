@@ -1,0 +1,66 @@
+% The titlepage for the CAMP report document.
+% Included by MAIN.TEX
+
+
+%--------------------------------------------------
+% The title page
+%--------------------------------------------------
+
+% correct BCOR - undo at the end !!!
+\def\bcorcor{0.15cm}
+\addtolength{\hoffset}{\bcorcor}
+
+\thispagestyle{empty}
+
+ \vspace{10mm}
+\begin{center}
+	       %\oTUM{4cm}
+	       \includegraphics[width=4cm]{styles/tum_logo.png}
+
+	   \vspace{5mm}
+	   \huge Computational Science and Engineering \\(Int. Master's Program)\\
+	   \vspace{0.5cm}
+	 \large Technische Universit{\"a}t M{\"u}nchen\\
+
+	\end{center}
+
+
+\vspace{10mm}
+\begin{center}
+
+   {\Large \doctype}
+
+  \vspace{10mm}
+
+  {\LARGE \title}\\
+
+
+  \vspace{10mm}
+
+
+  %{\LARGE  \titleGer}\\
+
+
+  %\vspace{10mm}
+
+    %\hfill
+    \begin{tabular}{ll}
+	   \Large Author:     & \Large \author \\[2mm]
+	   \Large $\mathrm{1^{st}}$ examiner:    & \Large \examinerOne\\[2mm]
+	   \Large $\mathrm{2^{nd}}$ examiner:    & \Large \examinerTwo \\[2mm]
+	  % \Large Assistant advisor(s):    & \Large N.A. \\[2mm]
+	   \Large Thesis handed in on:       & \Large \date
+	 \end{tabular}
+
+	 \vspace{5mm}
+
+	 \begin{figure}[h!]
+  \centering
+   \includegraphics[width=4cm]{styles/cse_logo.jpg}
+  \end{figure}
+
+
+\end{center}
+
+% undo BCOR correction
+\addtolength{\hoffset}{\bcorcor}

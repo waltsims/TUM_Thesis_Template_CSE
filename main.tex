@@ -1,0 +1,75 @@
+% Don't put any content in here.
+% Don't even include content files by using \input or \inlcude.
+% Put your content to TEXT.TEX or include it there using \input.
+% Uses:
+%		SETTINGS.TEX	contains the settings for this document
+%		COMMANDS.TEX	contains commands which can be used while writing
+%		INFO.TEX			contains the author, title and so on for the cover
+%		COVER.TEX			formats the front cover of the document
+%		ABSTRACT.TEX	contains the abstract to be included (if needed)
+%		TEXT.TEX			contains the actual content of the document
+%		BIB.BIB				contains the BibTeX entries for the document
+
+%% Final document
+\documentclass[11pt,
+							a4paper,
+							index=totoc,
+							headsepline,
+							footsepline,
+							BCOR12mm,
+							DIV13]{scrbook}
+
+
+% KOMA-Optionen:
+%  bibtotoc: include bibliography in table of contents
+%  idxtotoc: include index in table of contents
+%  headsepline: use horizontal line under heading
+%  BCOR: binding correction (Bindungskorrektur) (e.g.: BCOR5mm)
+%  DIV: Number of sheet sections (used for layout) (e.g.: DIV12)
+
+% include title and author information for the cover
+\input{components/info}
+
+% include settings
+\input{components/settings}
+
+% include commands
+\input{components/commands}
+
+%include glossary
+\input{components/glossary}
+
+\makeglossary
+
+\begin{document}
+
+ \frontmatter
+
+ \input{components/cover}
+
+ \clearemptydoublepage
+
+ \input{components/titlepage}
+
+ \input{components/disclaimer}
+
+ \input{components/acknowledgements}
+
+ \input{components/quote}
+
+ \input{components/abstract}
+
+ \tableofcontents
+
+ \mainmatter
+
+ \input{components/text.tex}
+
+ \clearemptydoublepage
+
+ \printglossaries
+
+ \addcontentsline{toc}{chapter}{Bibliography}
+ \bibliography{bibliography/literature}
+
+\end{document}

@@ -1,0 +1,127 @@
+% Included by MAIN.TEX
+% Please include your own cool commands here.
+% Be only sure to comment it sufficiently so others can use it.
+
+%-------------------------------------------------------------
+%                      Own Commands
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+% math stuff -------------------------------------------------
+
+% nice R, N, C
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\compl}{\mathbb{C}}
+
+% norm
+%\newcommand{\norm}[1]{\left\| #1 \right\|}
+
+% un demi
+\newcommand{\half}{\frac{1}{2}}
+
+% parantheses
+\newcommand{\parenth}[1]{ \left( #1 \right) }
+\newcommand{\bracket}[1]{ \left[ #1 \right] }
+\newcommand{\accolade}[1]{ \left\{ #1 \right\} }
+%\newcommand{\angle}[1]{ \left\langle  #1 \right\rangle }
+
+% partial derivative: %#1 function, #2 which variable
+% simple / single line version
+\newcommand{\pardevS}[2]{ \delta_{#1} f(#2) }
+
+% fraction version
+\newcommand{\pardevF}[2]{ \frac{\partial #1}{\partial #2} }
+
+% render vectors: 3 and 4 dimensional
+\newcommand{\veciii}[3]{\left[ \begin{array}[h]{c} #1 \\ #2 \\ #3	\end{array} \right]}
+\newcommand{\veciv}[4]{\left[ \begin{array}[h]{c} #1 \\ #2 \\ #3 \\ #4	\end{array} \right]}
+
+% render matrices: 3  dimensional (arguments in row first order)
+\newcommand{\matiii}[9]{\left[ \begin{array}[h]{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9	\end{array} \right]}
+
+
+%-------------------------------------------------------------
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+% some abreviations ------------------------------------------
+\newcommand{\Reg}{$^{\textregistered}$}
+\newcommand{\reg}{$^{\textregistered}$ }
+\newcommand{\Tm}{\texttrademark}
+\newcommand{\tm}{\texttrademark~}
+\newcommand {\bsl} {$\backslash$}
+
+%-------------------------------------------------------------
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+% formating --------------------------------------------------
+
+% Theorem & Co environments and counters
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{equat}[theorem]{Equation}
+\newtheorem{example}[theorem]{Example}
+%\newtheorem{algorithm}[theorem]{Algorithm}
+
+% inserting figures
+\newcommand{\insertfigure}[4]{ % Filename, Caption, Label, Width percent of textwidth
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=#4\textwidth]{#1}
+		\end{center}
+		\vspace{-0.4cm}
+		\caption{#2}
+		\label{#3}
+	\end{figure}
+}
+
+% referecing figures
+
+\newcommand{\refFigure}[1]{ %label
+	figure \ref{#1}
+}
+\newcommand{\refChapter}[1]{ %label
+	chapter \ref{#1}
+}
+
+\newcommand{\refSection}[1]{ %label
+	section \ref{#1}
+}
+
+\newcommand{\refParagraph}[1]{ %label
+	paragraph \ref{#1}
+}
+
+\newcommand{\refEquation}[1]{ %label
+	equation \ref{#1}
+}
+
+\newcommand{\refTable}[1]{ %label
+	table \ref{#1}
+}
+
+\newcommand{\rigidTransform}[2]
+{
+	${}^{#2}\!\mathbf{H}_{#1}$
+}
+
+% comment that appears on the border - very practical !!!
+\newcommand{\comment}[1]{\marginpar{\raggedright \noindent \footnotesize {\sl #1} }}
+
+% page clearing
+\newcommand{\clearemptydoublepage}{%
+  \ifthenelse{\boolean{@twoside}}{\newpage{\pagestyle{empty}\cleardoublepage}}%
+  {\clearpage}}
+
+%-------------------------------------------------------------
+%-------------------------------------------------------------
+
+\newcommand{\etAl}{\emph{et al.}\mbox{ }}

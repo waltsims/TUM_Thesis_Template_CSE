@@ -1,0 +1,20 @@
+#Latex stuff
+_minted*
+*.gz
+*.4ct
+*.4tc
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.log
+*.out
+*.pdf
+*.tmp
+*.toc
+*.xdy
+*.xref

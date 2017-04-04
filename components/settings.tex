@@ -1,0 +1,137 @@
+% Included by MAIN.TEX
+
+% manipulate footer
+\usepackage{scrpage2}
+\usepackage{scrhack}
+\pagestyle{scrheadings}
+\ifoot[\footertext]{\footertext} % \footertext set in INFO.TEX
+
+% Set header Font
+\renewcommand{\sectfont}{\normalfont \bfseries}        
+  
+
+\usepackage[english]{babel}
+
+\usepackage{styles/shortoverview}
+
+\usepackage{xspace}
+
+\setkomafont{pagenumber}{\normalfont\rmfamily}
+
+%% allow sophisticated control structures
+\usepackage{ifthen}
+
+% use Palatino as default font
+\usepackage{palatino}
+
+% enable special PostScript fonts
+\usepackage{pifont}
+
+%special biblography package (nice to have)
+%\usepackage{natbib} 
+
+% make thumbnails
+% \usepackage{thumbpdf}
+
+%to use the subfigures
+\usepackage{subcaption}
+
+%code import
+\usepackage[newfloat]{minted}
+
+% Set global minted options
+\setminted{linenos, autogobble, frame=lines, framesep=2mm}
+% Inline C++
+\newcommand{\incpp}[1]{\mintinline{c++}{#1}}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Source Code}
+
+\usepackage{colortbl}
+
+\usepackage{multicol}
+
+\usepackage{commath}
+
+%package for pseudocode
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+%normal arrow comments
+\algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}
+
+%% enable TUM symbols on title page
+\usepackage{styles/tumlogo}
+
+
+\usepackage{multirow}
+
+%% use colors
+\usepackage{color}
+
+%%table package
+\usepackage{tabu}
+
+%% make fancy math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{yhmath} % fr die adots
+%% mark text as preliminary
+
+%% create an index
+\usepackage{makeidx}
+
+% for the program environment
+\usepackage{float}
+
+%for glossary
+\usepackage[toc, xindy]{glossaries}
+
+%----------------------------------------------------
+%      Graphics and Hyperlinks
+%----------------------------------------------------
+
+%% check for pdfTeX
+\ifx\pdftexversion\undefined
+
+ %% use PostScript graphics
+ \usepackage[dvips]{graphicx}
+
+ \DeclareGraphicsExtensions{.eps,.epsi}
+ \graphicspath{{figures/}{figures/review}}
+ %% allow rotations
+ \usepackage{rotating}
+ %% mark pages as draft copies
+ %\usepackage[english,all,light]{draftcopy}
+ %% use hypertex version of hyperref
+ \usepackage[hypertex,hyperindex=false,colorlinks=false]{hyperref}
+\else %% reduce output size \pdfcompresslevel=9
+
+ %% declare pdfinfo
+ %\pdfinfo {
+ %  /Title (my title)
+ %  /Creator (pdfLaTeX)
+ %  /Author (my name)
+ %  /Subject (my subject	)
+ %  /Keywords (my keywords)
+ %}
+ %% use pdf or jpg graphics
+
+ \usepackage[pdftex]{graphicx}
+ \DeclareGraphicsExtensions{.jpg,.JPG,.png,.pdf,.eps}
+ \graphicspath{{figures/}}
+
+ %% Load float package, for enabling floating extensions
+ \usepackage{float}
+
+ %% allow rotations
+ \usepackage{rotating}
+ %% use pdftex version of hyperref
+ \usepackage[pdftex,colorlinks=true,linkcolor=red,citecolor=red,%
+ anchorcolor=red,urlcolor=red,bookmarks=true,%
+ bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
+ bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
+ ]{hyperref}
+\fi
+
+\bibliographystyle{plain}
