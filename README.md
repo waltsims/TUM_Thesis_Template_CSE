@@ -3,7 +3,7 @@
 
 This template is built upon one provided by the CSE chair @TUM in 2016. Though
 I am not firmiliar with the origional owner, I owe them much of the credit for
-this work.
+this work.  The origional publisher of this document for CSE was Yoshiyuki Sakai. 
 
 ## Dependencies
 
