@@ -10,6 +10,16 @@ this work.  The origional publisher of this document for CSE was Yoshiyuki Sakai
 - [install](https://www.latex-tutorial.com/installation/) LaTeX
 - install [Pygments](http://pygments.org) for
   [minted](ftp://ftp.dante.de/tex-archive/macros/latex/contrib/minted/minted.pdf)
+
+Note: if you prefer not to use minted (due to useability or preference), the
+package can of course be removed by commenting 
+[these lines of code](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L41-L48)
+ with a \% symbol
+and removing the minted example 
+[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/chapters/Introduction.tex#L51-L82).
+The listing package can be used by uncommmenting 
+[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L40).
+
  
 ## Creating a PDF
 creating a PDF from your LaTeX document based on this template consists of
