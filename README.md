@@ -17,7 +17,7 @@ package can of course be removed by commenting
  with a \% symbol
 and removing the minted example 
 [here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/chapters/Introduction.tex#L51-L82).
-The listing package can be used by uncommmenting 
+The listings package can be used by uncommmenting 
 [here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L40).
 
  
