@@ -40,6 +40,11 @@ three steps.
 Your compiled document will be found in the base project directory under
 main.pdf.
 
+**Note for IDE:** If you are using an IDE, you may be able to specify the `-shell-escape`
+flag in its settings or to specify an option specific to your builder in the `main.tex`
+file. For example, this is known to work for the latex-tools package for Atom and Sublime:
+
+   `% !TEX option = -shell-escape`
 
 ## Getting Started with LaTeX
  A great resource for learning LaTeX can be found
