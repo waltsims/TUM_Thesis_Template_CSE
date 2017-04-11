@@ -20,9 +20,9 @@ and removing the minted example
 The listings package can be used by uncommenting
 [here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L40).
 
- 
+
 ## Creating a PDF
-creating a PDF from your LaTeX document based on this template consists of
+Creating a PDF from your LaTeX document based on this template consists of
 three steps.
 
 1. In the base project directory, run the following command:
@@ -36,13 +36,12 @@ three steps.
 3. To recompile with citations repeat step 1.
 
    `pdflatex -shell-escape main.tex`
- 
+
 Your compiled document will be found in the base project directory under
 main.pdf.
 
 
 ## Getting Started with LaTeX
- A great resource for learning LaTeX can be found
+A great resource for learning LaTeX can be found
 [here](https://tobi.oetiker.ch/lshort/lshort.pdf)
 and is a great starting point for beginners.
-
