@@ -2,8 +2,8 @@
 ## Background
 
 This template is built upon one provided by the CSE chair @TUM in 2016. Though
-I am not firmiliar with the origional owner, I owe them much of the credit for
-this work.  The origional publisher of this document for CSE was Yoshiyuki Sakai. 
+I am not familiar with the original owner, I owe them much of the credit for
+this work.  The original publisher of this document for CSE was Yoshiyuki Sakai.
 
 ## Dependencies
 
@@ -11,13 +11,13 @@ this work.  The origional publisher of this document for CSE was Yoshiyuki Sakai
 - install [Pygments](http://pygments.org) for
   [minted](ftp://ftp.dante.de/tex-archive/macros/latex/contrib/minted/minted.pdf)
 
-Note: if you prefer not to use minted (due to useability or preference), the
-package can of course be removed by commenting 
+Note: if you prefer not to use minted (due to usability or preference), the
+package can of course be removed by commenting
 [these lines of code](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L41-L48)
  with a \% symbol
-and removing the minted example 
+and removing the minted example
 [here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/chapters/Introduction.tex#L51-L82).
-The listings package can be used by uncommmenting 
+The listings package can be used by uncommenting
 [here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L40).
 
  
