@@ -1,6 +1,16 @@
 % !TEX root = ../main.tex
 % Included by MAIN.TEX
 
+%--------------------------------------------------
+% Fonts and page setup
+%--------------------------------------------------
+
+% Default font
+\usepackage{palatino}
+
+% Enable special PostScript fonts (optional)
+% \usepackage{pifont}
+
 % Manipulate the footer
 \usepackage{scrpage2}
 \usepackage{scrhack}
@@ -9,26 +19,82 @@
 
 % Set the font for the section headings
 \renewcommand{\sectfont}{\normalfont \bfseries}
-% "Define commands that appear not to eat spaces" (optional)
-\usepackage{xspace}
 
 % Conditional commands in LaTeX documents, used for the \clearemptydoublepage.
 \usepackage{ifthen}
 
-% Default font
-\usepackage{palatino}
+% Typeset text in multiple columns (optional)
+% \usepackage{multicol}
 
-% Enable special PostScript fonts (optional)
-% \usepackage{pifont}
+% Rotation tools, including rotated full-page floats (optional)
+\usepackage{rotating}
+
+
+%--------------------------------------------------
+% Document structure
+%--------------------------------------------------
+
+% Enhanced support for graphics (recommended)
+\usepackage{graphicx}
+% Path to the figures directory (default: {figures/})
+% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
+\graphicspath{{figures/}}
+
+% Create glossaries and lists of acronyms
+\usepackage[toc, xindy]{glossaries}
+
+% Standard LaTeX package for creating indexes
+\usepackage{makeidx}
+
+
+%--------------------------------------------------
+% Bibliography
+%--------------------------------------------------
+
+% Set the bibliography style (default: plain)
+\bibliographystyle{plain}
 
 % Special biblography package (nice to have)
 % \usepackage{natbib}
 
-% Make thumbnails (optional)
-% \usepackage{thumbpdf}
+
+%--------------------------------------------------
+% Graphics and floats
+%--------------------------------------------------
+
+% Improved interface for floating objects (optional)
+\usepackage{float}
 
 % To use the subfigures (optional)
 \usepackage{subcaption}
+
+
+%--------------------------------------------------
+% Mathematics
+%--------------------------------------------------
+
+% AMS mathematical facilities for LaTeX (recommended)
+\usepackage{amsmath}
+
+% TeX fonts from the American Mathematical Society (recommended)
+\usepackage{amsfonts}
+
+% Some extra math symbols (optional)
+% \usepackage{amssymb}
+
+% LaTeX support for the Text Companion fonts (obsolete)
+% \usepackage{textcomp}
+
+% Extended maths fonts for LaTeX (optional)
+% \usepackage{yhmath}
+
+% Provide math delimiters whose size can be computed automatically (optional)
+% \usepackage{commath}
+
+
+%--------------------------------------------------
+% Source code and algorithms
+%--------------------------------------------------
 
 % Source code typesetting
 % \usepackage{listings} % (optional - alternative)
@@ -40,68 +106,30 @@
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Source Code}
 
-% Add color to LaTeX tables (optional)
-% \usepackage{colortbl}
-
-% Typeset text in multiple columns (optional)
-% \usepackage{multicol}
-
-% Provide math delimiters whose size can be computed automatically (optional)
-% \usepackage{commath}
-
 % Typeset algorithms - pseudocode (optional)
 % \usepackage{algorithmicx}
 % \usepackage{algpseudocode}
 % Normal arrow comments
 % \algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}
 
-% Create tabular cells spanning multiple rows (optional)
-% \usepackage{multirow}
 
-% Use colors (optional)
-\usepackage{color}
+%--------------------------------------------------
+% Tables
+%--------------------------------------------------
 
 % Tables (optional)
 \usepackage{tabu}
 
-% Make fancy math
-% AMS mathematical facilities for LaTeX (recommended)
-\usepackage{amsmath}
-% TeX fonts from the American Mathematical Society (recommended)
-\usepackage{amsfonts}
-% Some extra math symbols (optional)
-% \usepackage{amssymb}
-% LaTeX support for the Text Companion fonts (obsolete)
-% \usepackage{textcomp}
-% Extended maths fonts for LaTeX (optional)
-% \usepackage{yhmath}
+% Add color to LaTeX tables (optional)
+% \usepackage{colortbl}
 
-% Standard LaTeX package for creating indexes
-\usepackage{makeidx}
+% Create tabular cells spanning multiple rows (optional)
+% \usepackage{multirow}
 
-% Improved interface for floating objects (optional)
-\usepackage{float}
 
-% Create glossaries and lists of acronyms
-\usepackage[toc, xindy]{glossaries}
-
- % PDF Metadata (not working)
- % \pdfinfo {
- %  /Title (my title)
- %  /Creator (pdfLaTeX)
- %  /Author (my name)
- %  /Subject (my subject)
- %  /Keywords (my keywords)
- % }
-
-% Enhanced support for graphics (recommended)
-\usepackage{graphicx}
-% Path to the figures directory (default: {figures/})
-% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
-\graphicspath{{figures/}}
-
-% Rotation tools, including rotated full-page floats (optional)
-\usepackage{rotating}
+%--------------------------------------------------
+% PDF output
+%--------------------------------------------------
 
 % Pro­duce hy­per­text links in the doc­u­ment (recommended)
 \usepackage[colorlinks=true,linkcolor=red,citecolor=red,%
@@ -110,5 +138,25 @@ bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
 bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
 ]{hyperref}
 
-% Set the bibliography style (default: plain)
-\bibliographystyle{plain}
+% PDF Metadata (not working)
+% \pdfinfo {
+%  /Title (my title)
+%  /Creator (pdfLaTeX)
+%  /Author (my name)
+%  /Subject (my subject)
+%  /Keywords (my keywords)
+% }
+
+% Make thumbnails (optional)
+% \usepackage{thumbpdf}
+
+
+%--------------------------------------------------
+% Other settings
+%--------------------------------------------------
+
+% "Define commands that appear not to eat spaces" (optional)
+\usepackage{xspace}
+
+% Use colors (optional)
+\usepackage{color}
