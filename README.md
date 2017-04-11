@@ -40,6 +40,15 @@ three steps.
 Your compiled document will be found in the base project directory under
 main.pdf.
 
+## Compatibility with other TeX systems
+Currently, this template compiles successfully with:
+
+- LaTeX (pdflatex)
+- XeLaTeX
+- LuaLaTeX
+
+In case you want to mix more than one languages (e.g. english and german),
+using XeLaTeX (instead of LaTeX + Babel) is highly recommended.
 
 ## Getting Started with LaTeX
 A great resource for learning LaTeX can be found
