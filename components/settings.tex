@@ -82,26 +82,6 @@
 %for glossary
 \usepackage[toc, xindy]{glossaries}
 
-%----------------------------------------------------
-%      Graphics and Hyperlinks
-%----------------------------------------------------
-
-%% check for pdfTeX
-\ifx\pdftexversion\undefined
-
- %% use PostScript graphics
- \usepackage[dvips]{graphicx}
-
- \DeclareGraphicsExtensions{.eps,.epsi}
- \graphicspath{{figures/}{figures/review}}
- %% allow rotations
- \usepackage{rotating}
- %% mark pages as draft copies
- %\usepackage[english,all,light]{draftcopy}
- %% use hypertex version of hyperref
- \usepackage[hypertex,hyperindex=false,colorlinks=false]{hyperref}
-\else %% reduce output size \pdfcompresslevel=9
-
  %% declare pdfinfo
  %\pdfinfo {
  %  /Title (my title)
@@ -127,6 +107,5 @@
  bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
  bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
  ]{hyperref}
-\fi
 
 \bibliographystyle{plain}
