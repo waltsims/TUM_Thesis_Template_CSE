@@ -1,106 +1,114 @@
 % !TEX root = ../main.tex
 % Included by MAIN.TEX
 
-% manipulate footer
+% Manipulate the footer
 \usepackage{scrpage2}
 \usepackage{scrhack}
 \pagestyle{scrheadings}
 \ifoot[\footertext]{\footertext} % \footertext set in INFO.TEX
 
-% Set header Font
+% Set the font for the section headings
 \renewcommand{\sectfont}{\normalfont \bfseries}
-
+% "Define commands that appear not to eat spaces" (optional)
 \usepackage{xspace}
 
-%% allow sophisticated control structures
+% Conditional commands in LaTeX documents, used for the \clearemptydoublepage.
 \usepackage{ifthen}
 
-% use Palatino as default font
+% Default font
 \usepackage{palatino}
 
-% enable special PostScript fonts
+% Enable special PostScript fonts (optional)
 \usepackage{pifont}
 
-%special biblography package (nice to have)
-%\usepackage{natbib}
+% Special biblography package (nice to have)
+% \usepackage{natbib}
 
-% make thumbnails
+% Make thumbnails (optional)
 % \usepackage{thumbpdf}
 
-%to use the subfigures
+% To use the subfigures
 \usepackage{subcaption}
 
-%code import
-%\usepackage{listings}
-\usepackage[newfloat]{minted}
-
-% Set global minted options
+% Source code typesetting
+% \usepackage{listings} % (optional - alternative)
+\usepackage[newfloat]{minted} % (recommended)
+% Set global Minted options
 \setminted{linenos, autogobble, frame=lines, framesep=2mm}
-% Inline C++
+% Inline C++ (optional)
 \newcommand{\incpp}[1]{\mintinline{c++}{#1}}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Source Code}
 
+% Add color to LaTeX tables (optional)
 \usepackage{colortbl}
 
+% Typeset text in multiple columns (optional)
 \usepackage{multicol}
 
+% Provide math delimiters whose size can be computed automatically (optional)
 \usepackage{commath}
 
-%package for pseudocode
+% Typeset algorithms - pseudocode (optional)
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
-%normal arrow comments
+% Normal arrow comments
 \algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}
 
+% Create tabular cells spanning multiple rows (optional)
 \usepackage{multirow}
 
-%% use colors
+% Use colors (optional)
 \usepackage{color}
 
-%%table package
+% Tables (optional)
 \usepackage{tabu}
 
-%% make fancy math
+% Make fancy math
+% AMS mathematical facilities for LaTeX (recommended)
 \usepackage{amsmath}
+% TeX fonts from the American Mathematical Society (recommended)
 \usepackage{amsfonts}
+% Some extra math symbols (optional)
 \usepackage{amssymb}
+% LaTeX support for the Text Companion fonts (obsolete)
 \usepackage{textcomp}
-\usepackage{yhmath} % fr die adots
-%% mark text as preliminary
+% Extended maths fonts for LaTeX (optional)
+\usepackage{yhmath}
 
-%% create an index
+% Standard LaTeX package for creating indexes
 \usepackage{makeidx}
 
-% for the program environment
+% Improved interface for floating objects (optional)
 \usepackage{float}
 
-%for glossary
+% Create glossaries and lists of acronyms
 \usepackage[toc, xindy]{glossaries}
 
- %% declare pdfinfo
- %\pdfinfo {
+ % PDF Metadata (not working)
+ % \pdfinfo {
  %  /Title (my title)
  %  /Creator (pdfLaTeX)
  %  /Author (my name)
- %  /Subject (my subject	)
+ %  /Subject (my subject)
  %  /Keywords (my keywords)
- %}
- %% use pdf or jpg graphics
+ % }
 
- \usepackage{graphicx}
- \graphicspath{{figures/}}
+% Enhanced support for graphics (recommended)
+\usepackage{graphicx}
+% Path to the figures directory (default: {figures/})
+% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
+\graphicspath{{figures/}}
 
- %% Load float package, for enabling floating extensions
- \usepackage{float}
+% Rotation tools, including rotated full-page floats (optional)
+\usepackage{rotating}
 
- %% allow rotations
- \usepackage{rotating}
- %% use pdftex version of hyperref
- \usepackage[colorlinks=true,linkcolor=red,citecolor=red,%
- anchorcolor=red,urlcolor=red,bookmarks=true,%
- bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
- bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
- ]{hyperref}
+% Pro­duce hy­per­text links in the doc­u­ment (recommended)
+\usepackage[colorlinks=true,linkcolor=red,citecolor=red,%
+anchorcolor=red,urlcolor=red,bookmarks=true,%
+bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
+bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
+]{hyperref}
 
+% Set the bibliography style (default: plain)
 \bibliographystyle{plain}
