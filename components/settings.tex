@@ -34,12 +34,6 @@
 % Document structure
 %--------------------------------------------------
 
-% Enhanced support for graphics (recommended)
-\usepackage{graphicx}
-% Path to the figures directory (default: {figures/})
-% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
-\graphicspath{{figures/}}
-
 % Create glossaries and lists of acronyms
 \usepackage[toc, xindy]{glossaries}
 
@@ -61,6 +55,12 @@
 %--------------------------------------------------
 % Graphics and floats
 %--------------------------------------------------
+
+% Enhanced support for graphics (recommended)
+\usepackage{graphicx}
+% Path to the figures directory (default: {figures/})
+% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
+\graphicspath{{figures/}}
 
 % Improved interface for floating objects (optional)
 \usepackage{float}
@@ -155,7 +155,7 @@ bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
 % Other settings
 %--------------------------------------------------
 
-% "Define commands that appear not to eat spaces" (optional)
+% Define commands that appear not to eat spaces (optional)
 \usepackage{xspace}
 
 % Use colors (optional)
