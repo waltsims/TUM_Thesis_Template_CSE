@@ -13,12 +13,12 @@ this work.  The original publisher of this document for CSE was Yoshiyuki Sakai.
 
 Note: if you prefer not to use minted (due to usability or preference), the
 package can of course be removed by commenting
-[these lines of code](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L41-L48)
+[these lines of code](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L98-L104)
  with a \% symbol
 and removing the minted example
-[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/chapters/Introduction.tex#L51-L82).
+[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/chapters/Introduction.tex#L51-L87).
 The listings package can be used by uncommenting
-[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L40).
+[here](https://github.com/waltsims/Thesis_Template_CSE/blob/master/components/settings.tex#L97).
 
 
 ## Creating a PDF
