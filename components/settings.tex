@@ -125,15 +125,52 @@
 
 
 %--------------------------------------------------
+% Color
+%--------------------------------------------------
+
+% Use colors
+\usepackage[dvipsnames]{xcolor}
+
+% You may find all the pre-defined colors in
+% https://en.wikibooks.org/wiki/LaTeX/Colors#Predefined_colors
+
+% Custom colors
+\definecolor{Pantone300C}{HTML}{0065BD} % TUM primary blue
+\definecolor{Pantone301}{HTML}{005293}  % TUM secondary light blue
+\definecolor{Pantone540}{HTML}{003359}  % TUM secondary dark blue
+\definecolor{DarkGray}{HTML}{333333}    % TUM secondary dark gray
+\definecolor{MediumGray}{HTML}{808080}  % TUM secondary medium gray
+\definecolor{LightGray}{HTML}{CCCCC6}   % TUM secondary light gray
+\definecolor{Pantone7527}{HTML}{DAD7CB} % TUM accent gray
+\definecolor{Pantone158}{HTML}{E37222}  % TUM accent orange
+\definecolor{Pantone383}{HTML}{A2AD00}  % TUM accent green
+\definecolor{Pantone283}{HTML}{98C6EA}  % TUM accent very light blue
+\definecolor{Pantone542}{HTML}{64A0C8}  % TUM accent light blue
+
+% Color for the hyperlinks (e.g. table of contents)
+\def\colorLinks{Pantone300C}
+% Color for the web links
+\def\colorUrl{Pantone542}
+% Color for the citations
+\def\colorCitations{Pantone158}
+
+%--------------------------------------------------
 % PDF output
 %--------------------------------------------------
 
 % Pro­duce hy­per­text links in the doc­u­ment (recommended)
-\usepackage[colorlinks=true,linkcolor=red,citecolor=red,%
-anchorcolor=red,urlcolor=red,bookmarks=true,%
-bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
-bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
-]{hyperref}
+\usepackage{hyperref}
+
+% Adjust the color of the links
+\hypersetup{
+  linkcolor=\colorLinks,%
+  urlcolor=\colorUrl,%
+  citecolor=\colorCitations
+}
+
+% Disable the coloring of the links when printing.
+% Requires a compatible PDF reader.
+\usepackage[ocgcolorlinks]{ocgx2}[2017/03/30]
 
 % PDF Metadata
 \hypersetup{
@@ -151,6 +188,3 @@ bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
 
 % Define commands that appear not to eat spaces (optional)
 \usepackage{xspace}
-
-% Use colors (optional)
-\usepackage{color}
