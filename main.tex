@@ -1,44 +1,56 @@
-% The shell-escape flag is required for the Minted package.
-% !TEX option = -shell-escape
+% Important: The shell-escape flag is required for the Minted package.
+% Please compile this document with 'pdflatex -shell-escape main.tex'.
+% If you are using another IDE, you may be able to specify this in the
+% options or to provide an option like '% !TEX option = -shell-escape'
+% in this file, depending on your builder. See the README.md for more.
+
 % Don't put any content in here.
 % Don't even include content files by using \input or \inlcude.
-% Put your content to TEXT.TEX or include it there using \input.
-% Uses:
-%		SETTINGS.TEX	contains the settings for this document
-%		COMMANDS.TEX	contains commands which can be used while writing
-%		INFO.TEX			contains the author, title and so on for the cover
-%		COVER.TEX			formats the front cover of the document
-%		ABSTRACT.TEX	contains the abstract to be included (if needed)
-%		TEXT.TEX			contains the actual content of the document
-%		BIB.BIB				contains the BibTeX entries for the document
+% Put your content into components/text.tex or include it there using \input.
+% You probably want to modify the following files:
+%   components/info.tex             contains the author, title etc.
+%   components/settings.tex         contains the packages and settings.
+%   components/commands.tex         contains helpful custom commands.
+%   components/glossary.tex         contains an explanation of the used terms.
+%   components/acknowledgements.tex contains the acknowledgements.
+%   components/quote.tex            contains a quote.
+%   components/abstract.tex         contains the abstract of the document.
+%   components/text.tex             includes the actual content of the document.
+%   components/outline.tex          contains the outline.
+%   components/preface.tex          contains the preface.
+%   chapters/                       contains the main text.
+%   bibliography/literature.bib     contains the BibTeX entries.
+%   images/                         contains all your content-related images.
+%
+% You probably don't need to change anything in the following files:
+%   components/cover.tex            formats the front cover of the document.
+%   components/titlepage.tex        formats the title page of the document.
+%   components/disclaimer.tex       formats the disclaimer page.
+%   styles/                         contains style elements (e.g. logos).
+%   main.tex                        contains the top-level code structure.
+%   README.md                       contains information about this template.
 
-%% Final document
 \documentclass[11pt,
-							a4paper,
-							index=totoc,
-							headsepline,
-							footsepline,
-							BCOR12mm,
-							DIV13]{scrbook}
+              a4paper,
+              index=totoc,
+              headsepline,
+              footsepline,
+              BCOR12mm,
+              DIV13]{scrbook}
 
+% KOMA scrbook options:
+%  index=totoc: include an entry for the index in the table of contents.
+%  headsepline: use horizontal line under heading.
+%  footsepline: use horizontal line above footer.
+%  BCOR: binding correction (e.g.: BCOR12mm)
+%  DIV: Number of sheet sections (used for layout) (e.g.: DIV13)
 
-% KOMA-Optionen:
-%  bibtotoc: include bibliography in table of contents
-%  idxtotoc: include index in table of contents
-%  headsepline: use horizontal line under heading
-%  BCOR: binding correction (Bindungskorrektur) (e.g.: BCOR5mm)
-%  DIV: Number of sheet sections (used for layout) (e.g.: DIV12)
-
-% include title and author information for the cover
 \input{components/info}
 
-% include settings
 \input{components/settings}
 
-% include commands
 \input{components/commands}
 
-%include glossary
 \input{components/glossary}
 
 \makeglossary
@@ -65,7 +77,7 @@
 
  \mainmatter
 
- \input{components/text.tex}
+ \input{components/text}
 
  \clearemptydoublepage
 
