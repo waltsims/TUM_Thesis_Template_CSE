@@ -1,5 +1,5 @@
 % !TEX root = ../main.tex
-% The titlepage for the CAMP report document.
+% The titlepage.
 % Included by MAIN.TEX
 
 
@@ -13,54 +13,32 @@
 
 \thispagestyle{empty}
 
- \vspace{10mm}
+\vspace{4cm}
 \begin{center}
-	       %\oTUM{4cm}
-	       \includegraphics[width=4cm]{styles/tum_logo}
-
-	   \vspace{5mm}
-	   \huge Computational Science and Engineering \\(Int. Master's Program)\\
-	   \vspace{0.5cm}
-	 \large Technische Universit{\"a}t M{\"u}nchen\\
-
-	\end{center}
-
+    \includegraphics[width=4cm]{\universityLogo}\\
+    \vspace{5mm}
+    \huge \program \\
+    \vspace{0.5cm}
+    \large \university
+\end{center}
 
 \vspace{10mm}
 \begin{center}
+    {\Large \doctype}\\
+    \vspace{10mm}
+    {\LARGE \title}\\
+    \vspace{10mm}
 
-   {\Large \doctype}
-
-  \vspace{10mm}
-
-  {\LARGE \title}\\
-
-
-  \vspace{10mm}
-
-
-  %{\LARGE  \titleGer}\\
-
-
-  %\vspace{10mm}
-
-    %\hfill
     \begin{tabular}{ll}
-	   \Large Author:     & \Large \author \\[2mm]
-	   \Large $\mathrm{1^{st}}$ examiner:    & \Large \examinerOne\\[2mm]
-	   \Large $\mathrm{2^{nd}}$ examiner:    & \Large \examinerTwo \\[2mm]
-	  % \Large Assistant advisor(s):    & \Large N.A. \\[2mm]
-	   \Large Thesis handed in on:       & \Large \date
-	 \end{tabular}
+      \Large Author:                        & \Large \author \\[2mm]
+      \Large 1\textsuperscript{st} examiner:& \Large \examinerOne\\[2mm]
+      \Large 2\textsuperscript{nd} examiner:& \Large \examinerTwo \\[2mm]
+      \Large Assistant advisor:             & \Large \assistantAdvisor \\[2mm]
+      \Large Submission Date:               & \Large \date
+    \end{tabular}
 
-	 \vspace{5mm}
-
-	 \begin{figure}[h!]
-  \centering
-   \includegraphics[width=4cm]{styles/cse_logo}
-  \end{figure}
-
-
+    \vspace{50mm}
+    \includegraphics[width=4cm]{\programLogo}
 \end{center}
 
 % undo BCOR correction
