@@ -1,139 +1,156 @@
 % !TEX root = ../main.tex
 % Included by MAIN.TEX
 
-% manipulate footer
+%--------------------------------------------------
+% Fonts and page setup
+%--------------------------------------------------
+
+% Default font
+\usepackage{palatino}
+
+% Enable special PostScript fonts (optional)
+% \usepackage{pifont}
+
+% Manipulate the footer
 \usepackage{scrpage2}
 \usepackage{scrhack}
 \pagestyle{scrheadings}
 \ifoot[\footertext]{\footertext} % \footertext set in INFO.TEX
 
-% Set header Font
-\renewcommand{\sectfont}{\normalfont \bfseries}        
-  
+% Set the font for the section headings
+\renewcommand{\sectfont}{\normalfont \bfseries}
 
-\usepackage[english]{babel}
-
-\usepackage{styles/shortoverview}
-
-\usepackage{xspace}
-
-\setkomafont{pagenumber}{\normalfont\rmfamily}
-
-%% allow sophisticated control structures
+% Conditional commands in LaTeX documents, used for the \clearemptydoublepage.
 \usepackage{ifthen}
 
-% use Palatino as default font
-\usepackage{palatino}
+% Typeset text in multiple columns (optional)
+% \usepackage{multicol}
 
-% enable special PostScript fonts
-\usepackage{pifont}
+% Rotation tools, including rotated full-page floats (optional)
+\usepackage{rotating}
 
-%special biblography package (nice to have)
-%\usepackage{natbib} 
 
-% make thumbnails
-% \usepackage{thumbpdf}
+%--------------------------------------------------
+% Document structure
+%--------------------------------------------------
 
-%to use the subfigures
+% Create glossaries and lists of acronyms
+\usepackage[toc, xindy]{glossaries}
+
+% Standard LaTeX package for creating indexes
+\usepackage{makeidx}
+
+
+%--------------------------------------------------
+% Bibliography
+%--------------------------------------------------
+
+% Set the bibliography style (default: plain)
+\bibliographystyle{plain}
+
+% Special biblography package (nice to have)
+% \usepackage{natbib}
+
+
+%--------------------------------------------------
+% Graphics and floats
+%--------------------------------------------------
+
+% Enhanced support for graphics (recommended)
+\usepackage{graphicx}
+% Path to the figures directory (default: {figures/})
+% Multiple entries are allowed, e.g. {{figures1/}{figures2/}}.
+\graphicspath{{figures/}}
+
+% Improved interface for floating objects (optional)
+\usepackage{float}
+
+% To use the subfigures (optional)
 \usepackage{subcaption}
 
-%code import
-%\usepackage{listings}
-\usepackage[newfloat]{minted}
 
-% Set global minted options
+%--------------------------------------------------
+% Mathematics
+%--------------------------------------------------
+
+% AMS mathematical facilities for LaTeX (recommended)
+\usepackage{amsmath}
+
+% TeX fonts from the American Mathematical Society (recommended)
+\usepackage{amsfonts}
+
+% Some extra math symbols (optional)
+% \usepackage{amssymb}
+
+% Extended maths fonts for LaTeX (optional)
+% \usepackage{yhmath}
+
+% Provide math delimiters whose size can be computed automatically (optional)
+% \usepackage{commath}
+
+
+%--------------------------------------------------
+% Source code and algorithms
+%--------------------------------------------------
+
+% Source code typesetting
+% \usepackage{listings} % (optional - alternative)
+\usepackage[newfloat]{minted} % (recommended)
+% Set global Minted options
 \setminted{linenos, autogobble, frame=lines, framesep=2mm}
-% Inline C++
+% Inline C++ (optional)
 \newcommand{\incpp}[1]{\mintinline{c++}{#1}}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Source Code}
 
-\usepackage{colortbl}
-
-\usepackage{multicol}
-
-\usepackage{commath}
-
-%package for pseudocode
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
-%normal arrow comments
-\algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}
-
-%% enable TUM symbols on title page
-\usepackage{styles/tumlogo}
+% Typeset algorithms - pseudocode (optional)
+% \usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+% Normal arrow comments
+% \algrenewcommand{\algorithmiccomment}[1]{\hfill$\rightarrow$ #1}
 
 
-\usepackage{multirow}
+%--------------------------------------------------
+% Tables
+%--------------------------------------------------
 
-%% use colors
-\usepackage{color}
-
-%%table package
+% Tables (optional)
 \usepackage{tabu}
 
-%% make fancy math
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{textcomp}
-\usepackage{yhmath} % fr die adots
-%% mark text as preliminary
+% Add color to LaTeX tables (optional)
+% \usepackage{colortbl}
 
-%% create an index
-\usepackage{makeidx}
+% Create tabular cells spanning multiple rows (optional)
+% \usepackage{multirow}
 
-% for the program environment
-\usepackage{float}
 
-%for glossary
-\usepackage[toc, xindy]{glossaries}
+%--------------------------------------------------
+% PDF output
+%--------------------------------------------------
 
-%----------------------------------------------------
-%      Graphics and Hyperlinks
-%----------------------------------------------------
+% Pro­duce hy­per­text links in the doc­u­ment (recommended)
+\usepackage[colorlinks=true,linkcolor=red,citecolor=red,%
+anchorcolor=red,urlcolor=red,bookmarks=true,%
+bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
+bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
+]{hyperref}
 
-%% check for pdfTeX
-\ifx\pdftexversion\undefined
+% PDF Metadata
+\hypersetup{
+  pdftitle={\title},%
+  pdfauthor={\author}
+}
 
- %% use PostScript graphics
- \usepackage[dvips]{graphicx}
+% Make thumbnails (optional)
+% \usepackage{thumbpdf}
 
- \DeclareGraphicsExtensions{.eps,.epsi}
- \graphicspath{{figures/}{figures/review}}
- %% allow rotations
- \usepackage{rotating}
- %% mark pages as draft copies
- %\usepackage[english,all,light]{draftcopy}
- %% use hypertex version of hyperref
- \usepackage[hypertex,hyperindex=false,colorlinks=false]{hyperref}
-\else %% reduce output size \pdfcompresslevel=9
 
- %% declare pdfinfo
- %\pdfinfo {
- %  /Title (my title)
- %  /Creator (pdfLaTeX)
- %  /Author (my name)
- %  /Subject (my subject	)
- %  /Keywords (my keywords)
- %}
- %% use pdf or jpg graphics
+%--------------------------------------------------
+% Other settings
+%--------------------------------------------------
 
- \usepackage[pdftex]{graphicx}
- \DeclareGraphicsExtensions{.jpg,.JPG,.png,.pdf,.eps}
- \graphicspath{{figures/}}
+% Define commands that appear not to eat spaces (optional)
+\usepackage{xspace}
 
- %% Load float package, for enabling floating extensions
- \usepackage{float}
-
- %% allow rotations
- \usepackage{rotating}
- %% use pdftex version of hyperref
- \usepackage[pdftex,colorlinks=true,linkcolor=red,citecolor=red,%
- anchorcolor=red,urlcolor=red,bookmarks=true,%
- bookmarksopen=true,bookmarksopenlevel=0,plainpages=false,%
- bookmarksnumbered=true,hyperindex=false,pdfstartview=true%
- ]{hyperref}
-\fi
-
-\bibliographystyle{plain}
+% Use colors (optional)
+\usepackage{color}
