@@ -174,9 +174,14 @@
 
 % PDF Metadata
 \hypersetup{
-  pdftitle={\title},%
-  pdfauthor={\author}
+  pdftitle={\metaTitle},%
+  pdfauthor={\metaAuthor},%
+  pdfkeywords={\metaKeywords},%
+  pdfsubject={\metaSubject}
 }
+
+% Create XMP Metadata (uses the values from hyperref)
+\usepackage{hyperxmp}
 
 % Make thumbnails (optional)
 % \usepackage{thumbpdf}
