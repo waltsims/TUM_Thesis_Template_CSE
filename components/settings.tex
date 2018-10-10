@@ -34,7 +34,12 @@
 % Document structure
 %--------------------------------------------------
 
+% Pro­duce hy­per­text links in the doc­u­ment (recommended)
+\usepackage{hyperref}
+
 % Create glossaries and lists of acronyms
+% depending on how many packages were shipped with your TeX distribution,
+% you might need to install xindy. On Linux: sudo apt install xindy
 \usepackage[toc, xindy]{glossaries}
 
 % Standard LaTeX package for creating indexes
@@ -157,9 +162,6 @@
 %--------------------------------------------------
 % PDF output
 %--------------------------------------------------
-
-% Pro­duce hy­per­text links in the doc­u­ment (recommended)
-\usepackage{hyperref}
 
 % Adjust the color of the links
 \hypersetup{
