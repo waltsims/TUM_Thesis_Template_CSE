@@ -27,8 +27,9 @@ jobs:
       uses: xu-cheng/latex-action@master
       args: --shell-escape
       extra_system_packages: "py-pygments"
-      root_file: main.tex
-      run: |
+      with:
+          root_file: main.tex
+#         run: |
 #         pdflatex -shell-escape main.tex
 #         bibtex main
 #         pdflatex -shell-escape main.tex
