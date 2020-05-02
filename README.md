@@ -61,6 +61,6 @@ A great resource for learning LaTeX can be found
 [here](https://tobi.oetiker.ch/lshort/lshort.pdf)
 and is a great starting point for beginners.
 
-### Contribution guide
+## Contribution guide
 
 The idea of this project is to help all students of the TUM during the challenging time of their master's thesis. To this end please give back to the project by contributing features and changes you think can help others. To do so simply open a merge request.
