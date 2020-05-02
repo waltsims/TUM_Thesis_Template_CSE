@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: pdflatex
+name: lualatex
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -27,7 +27,7 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
           root_file: main.tex
-          args: "-pdf -file-line-error -interaction=nonstopmode --shell-escape"
+          args: "-lualatex --file-line-error --interaction=nonstopmode"
           pre_compile: "tlmgr update --all"
           extra_system_packages: "py-pygments"
 #         run: |

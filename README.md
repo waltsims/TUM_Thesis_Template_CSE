@@ -1,4 +1,4 @@
-![](https://github.com/waltsims/TUM_Thesis_Template_CSE/workflows/CI/badge.svg)
+![](https://github.com/waltsims/TUM_Thesis_Template_CSE/workflows/pdflatex/badge.svg) ![](https://github.com/waltsims/TUM_Thesis_Template_CSE/workflows/xelatex/badge.svg) ![](https://github.com/waltsims/TUM_Thesis_Template_CSE/workflows/lualatex/badge.svg)
 
 # CSE Thesis Template
 ## Background
