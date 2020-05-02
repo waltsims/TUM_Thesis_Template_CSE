@@ -30,7 +30,3 @@ jobs:
           args: "-pdf -file-line-error -interaction=nonstopmode --shell-escape"
           pre_compile: "tlmgr update --all"
           extra_system_packages: "py-pygments"
-#         run: |
-#         pdflatex -shell-escape main.tex
-#         bibtex main
-#         pdflatex -shell-escape main.tex
