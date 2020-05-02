@@ -24,7 +24,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Compilation test.
-      uses: xu-cheng/latex-action@master
+    - uses: xu-cheng/latex-action@master
       args: --shell-escape
       extra_system_packages: "py-pygments"
       with:
