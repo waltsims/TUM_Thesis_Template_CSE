@@ -7,6 +7,11 @@ This template is built upon one provided by the CSE chair @TUM in 2016. Though
 I am not familiar with the original owner, I owe them much of the credit for
 this work.  The original publisher of this document for CSE was Yoshiyuki Sakai.
 
+## Other Options
+
+* [From Florian Walch](https://github.com/fwalch/tum-thesis-latex)
+* [From Micheal Grupp](https://github.com/MichaelGrupp/TTT)
+
 ## Dependencies
 
 - [install](https://www.latex-tutorial.com/installation/) LaTeX
@@ -47,13 +52,6 @@ flag in its settings or to specify an option specific to your builder in the `ma
 file. For example, this is known to work for the latex-tools package for Atom and Sublime:
 
    `% !TEX option = -shell-escape`
-
-## Compatibility with other TeX systems
-Currently, this template compiles successfully with:
-
-- LaTeX (pdflatex)
-- XeLaTeX
-- LuaLaTeX
 
 In case you want to mix more than one languages (e.g. english and german),
 using XeLaTeX (instead of LaTeX + Babel) is highly recommended.
