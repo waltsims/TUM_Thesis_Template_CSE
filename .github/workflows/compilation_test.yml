@@ -20,15 +20,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Set up git repository
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
     - name: Compilation test.
-    - uses: xu-cheng/latex-action@master
-      args: --shell-escape
-      extra_system_packages: "py-pygments"
+      uses: xu-cheng/latex-action@master
       with:
           root_file: main.tex
+          args: "--shell-escape"
+          extra_system_packages: "py-pygments"
 #         run: |
 #         pdflatex -shell-escape main.tex
 #         bibtex main
