@@ -27,7 +27,7 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
           root_file: main.tex
-          args: "-lualatex --file-line-error --interaction=nonstopmode"
+          args: "--shell-escape -lualatex --file-line-error --interaction=nonstopmode"
           pre_compile: "tlmgr update --all"
           extra_system_packages: "py-pygments"
 #         run: |
