@@ -24,21 +24,12 @@ The listings package can be used by uncommenting
 
 
 ## Creating a PDF
-Creating a PDF from your LaTeX document based on this template consists of
-three steps.
 
-1. In the base project directory, run the following command:
+To create your thesis pdf, run:
 
-   `pdflatex -shell-escape main.tex`.
-
-2. In order to add citations to the work, run:
-
-   `bibtex main`.
-
-3. To recompile with citations repeat step 1.
-
-   `pdflatex -shell-escape main.tex`
-
+```bash
+latexmk --pdf -file-line-error -interaction=nonstopmode -shell-escape main.tex
+```
 Your compiled document will be found in the base project directory under
 main.pdf.
 
